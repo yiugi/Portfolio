@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mister Açaí</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <style>
+        /* Estilos CSS gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #7e57c2;
+            color: #ffffff;
+        }
+        
+        header {
+            background-color: #673ab7;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            animation: neon 1s infinite;
+        }
+        
+        @keyframes neon {
+            0%, 100% {
+                text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+            }
+            50% {
+                text-shadow: none;
+            }
+        }
+        
+        nav {
+            background-color: #512da8;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ffeb3b;
+        }
+        
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .photo-animation {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .photo-animation img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #cccccc;
+        }
+        
+        form button {
+            padding: 10px 20px;
+            background-color: #673ab7;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        form button:hover {
+            background-color: #512da8;
+        }
+        
+        footer {
+            background-color: #673ab7;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Estilos específicos para a versão mobile */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+            
+            nav {
+                padding: 5px;
+            }
+            
+            nav a {
+                font-size: 14px;
+            }
+            
+            section {
+                padding: 10px;
+            }
+            
+            .photo-animation {
+                height: 200px;
+            }
+            
+            form input[type="text"],
+            form input[type="email"],
+            form textarea {
+                padding: 6px;
+                font-size: 14px;
+            }
+            
+            form button {
+                padding: 8px 16px;
+            }
+            
+            footer {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mister Açaí</h1>
+    </header>
+    
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    
+    <section id="sobre">
+        <h2>Sobre o Açaí</h2>
+        <p>A vida é cheia de possibilidades. Temos vários desejos, e por isso criamos planos e inevitavelmente construimos uma perspectiva do que virá adiante. Mas tudo isso só vira realidade quando a gente decide de fato colocar as mãos na massa. Afinal de contas, não dá pra ficar esperando as coisas acontecerem.
+
+          Para chegar onde quer chegar é necessário disposição e energia.
+          
+          Mister Açai possui uma linha de produtos que atende diferentes momentos do seu dia e oferece a energia necessária para transformar seus sonhos em conquistas de verdade!
+          
+          Agora que você sabe por onde começar, conte com a Mister Açai.</p>
+    </section>
+    
+    <section id="cardapio">
+      <head>
+        <title>Cardápio de Açaí</title>
+        <style>
+            /* Estilos CSS gerais */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #7e57c2;
+                color: #ffffff;
+            }
+            
+            h1 {
+                text-align: center;
+                font-size: 48px;
+                animation: neon 2s infinite;
+            }
+            
+            @keyframes neon {
+                0%, 100% {
+                    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+                }
+                50% {
+                    text-shadow: none;
+                }
+            }
+            
+            .menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            
+            .menu-item {
+                width: 200px;
+                height: 200px;
+                margin: 20px;
+                background-color: #673ab7;
+                color: #ffffff;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s;
+                cursor: pointer;
+            }
+            
+            .menu-item:hover {
+                transform: scale(1.05);
+            }
+            
+            .menu-item h2 {
+                font-size: 24px;
+            }
+            
+            /* Estilos específicos para a versão mobile */
+            @media (max-width: 600px) {
+                h1 {
+                    font-size: 32px;
+                }
+                
+                .menu-item {
+                    width: 150px;
+                    height: 150px;
+                    margin: 10px;
+                }
+                
+                .menu-item h2 {
+                    font-size: 18px;
+                }
+             
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Cardápio de Açaí</h1>
+        
+        <div class="menu">
+            <div class="menu-item">
+                <img src="img/açai3.jpg" height="40px" alt="Açaí 1">
+                <h2>Açaí de Morango</h2>
+                <p>Descrição do açaí de morango.</p>
+            </div>
+            
+            <div class="menu-item">
+                <img src="img/açai_com_banana.jpg" height="40px" alt="Açaí 2">
+                <h2>Açaí de Banana</h2>
+                <p>Descrição do açaí de banana.</p>
+            </div>
+            
+            <div class="menu-item">
+                <img src="img/açai1.jpg" height="40px" alt="Açaí 3">
+                <h2>Açaí de Kiwi</h2>
+                <p>Descrição do açaí com muito doce.</p>
+            </div>
+            
+            <div class="menu-item">
+                <img src="img/açai5.jpg" height="40px" alt="Açaí 4">
+                <h2>Açaí de Abacaxi</h2>
+                <p>Descrição do açaí de abacaxi.</p>
+            </div>
+        </div>
+        
+        <script>
+            // Script JavaScript para animar as letras do título
+            var title = document.querySelector('h1');
+            
+            function toggleNeon() {
+                title.classList.toggle('neon');
+            }
+            
+            setInterval(toggleNeon, 2000);
+        </script>
+       
+        
+        <p>Descrição dos itens do cardápio de Açaí.</p>
+        
+       
+      
+    </section>
+    
+    <section id="contato">
+        <h2>Faça seu pedido online</h2>
+        
+        <form>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+        
+        <p>Informações de contato do Mister Açaí.</p>
+
+        <style>
+          /* Estilos CSS gerais */
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #7e57c2;
+              color: #ffffff;
+          }
+          
+          header {
+              background-color: #673ab7;
+              padding: 20px;
+              text-align: center;
+          }
+          
+          h1 {
+              margin: 0;
+              font-size: 36px;
+          }
+          
+          nav {
+              background-color: #512da8;
+              padding: 10px;
+              text-align: center;
+          }
+          
+          nav a {
+              color: #ffffff;
+              text-decoration: none;
+              padding: 5px 10px;
+              transition: color 0.3s;
+          }
+          
+          nav a:hover {
+              color: #ffeb3b;
+          }
+          
+          section {
+              padding: 20px;
+              text-align: center;
+          }
+          
+          .contact-info {
+              margin-bottom: 20px;
+          }
+          
+          .contact-info h2 {
+              font-size: 24px;
+              margin-bottom: 10px;
+          }
+          
+          .contact-info p {
+              margin-bottom: 5px;
+          }
+          
+          .map-container {
+              width: 100%;
+              height: 300px;
+              margin-bottom: 20px;
+          }
+          
+          footer {
+              background-color: #673ab7;
+              padding: 20px;
+              text-align: center;
+          }
+          
+          /* Estilos específicos para a versão mobile */
+          @media (max-width: 600px) {
+              h1 {
+                  font-size: 24px;
+              }
+              
+              nav {
+                  padding: 5px;
+              }
+              
+              nav a {
+                  font-size: 14px;
+              }
+              
+              section {
+                  padding: 10px;
+              }
+              
+              .map-container {
+                  height: 200px;
+              }
+              
+              footer {
+                  padding: 10px;
+              }
+          }
+      </style>
+  </head>
+  <body>
+      <header>
+          <h1 style="color: #ffffff;">Contato</h1>
+      </header>
+      
+      <nav>
+          <a href="#contato" style="color: #ffffff;">Contato</a>
+          
+      </nav>
+      
+      <section id="contato">
+          <div class="contact-info">
+              <h2>Informações de Contato</h2>
+              <p>Endereço: Rua vale formoso, 287;</p>
+              <p>Telefone: (33)  9127-9015</p>
+              <p>Email: Misteraçaigv@gmail.com</p>
+          </div>
+      </section>
+      
+      <section id="localizacao">
+          <h2>Localização</h2>
+          
+          <div class="map-container">
+              <!-- Aqui você pode adicionar um mapa ou imagem da localização -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.3045308671876!2d-41.97326582542017!3d-18.8735666062819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb1a7bb2d6cfded%3A0xaeb88c8f2bc297de!2zTWlzdGVyIEHDp2HDrQ!5e0!3m2!1spt-BR!2sbr!4v1689562386099!5m2!1spt-BR!2sbr" width="100" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+      </section>
+    </section>
+    
+    <footer>
+        <p>© Criador:Gustavo Vieira</p>
+        <p>© 2023 Mister Açaí. Todos os direitos reservados.</p>
+    </footer>
+   
+    
+    <script>
+        // Script JavaScript para animar as fotos
+        var images = document.querySelectorAll('.photo-animation img');
+        var currentIndex = 0;
+        var intervalTime = 3000; // Tempo em milissegundos (3 segundos)
+        
+        function changeImage() {
+            images[currentIndex].style.opacity = 0;
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].style.opacity = 1;
+        }
+        
+        setInterval(changeImage, intervalTime);
+    </script>
+</body>
+</html>
